@@ -7,7 +7,7 @@ jobs:
     stepes:
       -uses: actions/chechout@v2
       -name: build and push to docker
-        uses: docker/buil-push-action@v1
+        uses: docker/buil-push-action@main
         with: 
           username: ${{secrets.DOCKER_USERNAME}}
           pawssword: ${{secrets.DOCKER_PASSWORD}}
