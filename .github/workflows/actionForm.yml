@@ -1,0 +1,17 @@
+on: push
+name: portfolio
+jobs:
+  deploy:
+    name: deploy to cluster
+    runs-on: ubuntu-latest
+    stepes:
+      -uses: actions/chechout@v2
+      -name: build and push to docker
+        uses: docker/buil-push-action@v1
+        with: 
+          username: ${{secrets.DOCKER_USERNAME}}
+          pawssword: ${{secrets.DOCKER_PASSWORD}}
+          repository: ${{github.repository}}
+          tag_with_ref: true
+          tag_with_sha: true
+          tags: ${{github.sha}}
