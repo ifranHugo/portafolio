@@ -660,8 +660,8 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: 60%;
-    height: 25%;
+    width: 20%;
+    height: 5%;
     border-radius: 20px 20px 20px 20px;
     background-color: var(--blanco-color);
   }
